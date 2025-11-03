@@ -2,72 +2,295 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Liga Apostolado Sur - Copa del Rey</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Copa del Rey Fantasy - Liga Apostolado Sur</title>
   <style>
     body {
       font-family: 'Segoe UI', Arial, sans-serif;
       background: #f4f6f8;
-      margin: 40px;
-      text-align: center;
+      margin: 0;
+      padding: 20px;
+      line-height: 1.6;
     }
     .container {
-      max-width: 500px;
+      max-width: 900px;
       margin: auto;
       background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
       padding: 40px;
     }
     h1 {
-      color: #e02424;
-      margin-bottom: 20px;
-      font-size: 2em;
+      text-align: center;
+      color: #27ae60;
+      margin-bottom: 30px;
+      font-size: 2.5em;
     }
     h2 {
       color: #2c3e50;
-      margin-bottom: 30px;
-      font-size: 1.5em;
+      border-bottom: 3px solid #27ae60;
+      padding-bottom: 10px;
+      margin-top: 30px;
     }
-    .construction-icon {
-      font-size: 4em;
+    h3 {
+      color: #34495e;
+      margin-top: 25px;
+    }
+    .phase-section {
+      margin-bottom: 30px;
+      padding: 25px;
+      background: #f8fff9;
+      border-left: 5px solid #27ae60;
+      border-radius: 0 8px 8px 0;
+    }
+    .timeline {
+      background: #e8f5e8;
+      padding: 20px;
+      border-radius: 8px;
       margin: 20px 0;
     }
-    .message {
-      color: #7f8c8d;
-      font-size: 1.2em;
-      margin-bottom: 30px;
-      line-height: 1.6;
+    .highlight {
+      background: #fff3cd;
+      padding: 15px;
+      border-radius: 8px;
+      border-left: 4px solid #ffc107;
+      margin: 20px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 10px;
     }
     .back-button {
-      margin-top: 30px;
+      text-align: center;
+      margin-top: 40px;
     }
     .back-button a {
       display: inline-block;
-      padding: 12px 24px;
-      background: #e02424;
+      padding: 15px 30px;
+      background: #2980b9;
       color: white;
       text-decoration: none;
       border-radius: 8px;
       font-size: 1.1em;
-      transition: background 0.3s;
+      transition: all 0.3s;
     }
     .back-button a:hover {
-      background: #c41e3a;
+      background: #1a5980;
+      transform: translateY(-2px);
+    }
+    .match-bracket {
+      background: #f8f9fa;
+      border: 2px solid #27ae60;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .match-card {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 10px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .vs {
+      font-weight: bold;
+      color: #27ae60;
+      font-size: 1.2em;
+    }
+    .team-slot {
+      background: #e8f5e8;
+      padding: 8px 12px;
+      border-radius: 6px;
+      min-width: 120px;
+      text-align: center;
+      font-weight: bold;
+    }
+    .triangular-section {
+      background: #fff8e1;
+      border: 2px solid #ffc107;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .triangular-match {
+      background: #fff;
+      border-left: 4px solid #ffc107;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .emoji {
+      font-size: 1.3em;
+    }
+    .trophy {
+      text-align: center;
+      font-size: 3em;
+      margin: 20px 0;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Liga Apostolado Sur</h1>
-    <h2>Copa del Rey</h2>
-    
-    <div class="construction-icon">🚧</div>
-    
-    <div class="message">
-      Esta sección está actualmente en construcción.<br>
-      ¡Pronto podrás ver aquí toda la información de la Copa del Rey!
+    <h1><span class="emoji">🏆</span> Copa del Rey Fantasy</h1>
+    <div class="trophy">🏆</div>
+
+    <div class="timeline">
+      <h2>📅 Calendario de la Copa</h2>
+      <p><strong>La Copa del Rey se desarrollará en dos fases que se disputarán al arranque del año 2026 entre las jornadas 20 y 24.</strong></p>
     </div>
-    
+
+    <div class="phase-section">
+      <h2>🎯 Fase 1: Eliminatorias (Jornadas 20-21)</h2>
+      <ul>
+        <li><strong>Formato:</strong> Sorteo puro entre todos los jugadores</li>
+        <li><strong>Sistema:</strong> Ida y vuelta</li>
+        <li><strong>Jornada 20:</strong> Partidos de ida</li>
+        <li><strong>Jornada 21:</strong> Partidos de vuelta</li>
+        <li><strong>Clasificados:</strong> Los tres mejores equipos pasan a la final</li>
+      </ul>
+      
+      <div class="highlight">
+        <strong>📋 Proceso de Fase 1:</strong>
+        <ol>
+          <li>Se realizará un <strong>sorteo puro</strong> para emparejar a todos los participantes</li>
+          <li>Los enfrentamientos se jugarán a ida y vuelta en dos jornadas consecutivas</li>
+          <li>Se sumarán los puntos de ambas jornadas para determinar el ganador</li>
+          <li>Los <strong>tres equipos con mejores resultados</strong> se clasifican para la final triangular</li>
+        </ol>
+      </div>
+
+      <div class="match-bracket">
+        <h3 style="text-align: center; color: #27ae60; margin-bottom: 20px;">🗓️ Cuadro de Eliminatorias</h3>
+        
+        <div style="text-align: center; margin-bottom: 15px;">
+          <strong>Jornadas 20 (IDA) y 21 (VUELTA)</strong>
+        </div>
+
+        <div class="match-card">
+          <div class="team-slot">Equipo A</div>
+          <div class="vs">VS</div>
+          <div class="team-slot">Equipo B</div>
+        </div>
+
+        <div class="match-card">
+          <div class="team-slot">Equipo C</div>
+          <div class="vs">VS</div>
+          <div class="team-slot">Equipo D</div>
+        </div>
+
+        <div class="match-card">
+          <div class="team-slot">Equipo E</div>
+          <div class="vs">VS</div>
+          <div class="team-slot">Equipo F</div>
+        </div>
+
+        <div style="text-align: center; margin-top: 20px; font-style: italic; color: #666;">
+          Los equipos se asignarán tras el sorteo puro
+        </div>
+      </div>
+    </div>
+
+    <div class="phase-section">
+      <h2>🔥 Fase 2: Final Triangular (Jornadas 22-23-24)</h2>
+      <ul>
+        <li><strong>Participantes:</strong> Los tres clasificados de la Fase 1</li>
+        <li><strong>Duración:</strong> Tres jornadas (22, 23 y 24)</li>
+        <li><strong>Sistema:</strong> Todos contra todos</li>
+        <li><strong>Ganador:</strong> El equipo con más puntos acumulados en las tres jornadas</li>
+      </ul>
+      
+      <div class="highlight">
+        <strong>🎲 Final Triangular:</strong>
+        <ol>
+          <li>Se producirá un <strong>sorteo para dirimir el orden del triángulo</strong></li>
+          <li>Cada equipo se enfrentará a los otros dos durante las tres jornadas</li>
+          <li>El sistema de puntuación será el estándar fantasy de cada jornada</li>
+          <li>El equipo con mayor puntuación total será el <strong>Campeón de la Copa del Rey</strong> 🏆</li>
+        </ol>
+      </div>
+
+      <div class="triangular-section">
+        <h3 style="text-align: center; color: #f57c00; margin-bottom: 20px;">🏆 Final Triangular</h3>
+        
+        <div style="text-align: center; margin-bottom: 15px;">
+          <strong>Los 3 Clasificados de las Eliminatorias</strong>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 20px 0;">
+          <div style="background: #fff; border: 2px solid #ffc107; border-radius: 8px; padding: 15px; text-align: center;">
+            <strong>Clasificado 1</strong><br>
+            <small>Ganador Eliminatoria A vs B</small>
+          </div>
+          <div style="background: #fff; border: 2px solid #ffc107; border-radius: 8px; padding: 15px; text-align: center;">
+            <strong>Clasificado 2</strong><br>
+            <small>Ganador Eliminatoria C vs D</small>
+          </div>
+          <div style="background: #fff; border: 2px solid #ffc107; border-radius: 8px; padding: 15px; text-align: center;">
+            <strong>Clasificado 3</strong><br>
+            <small>Ganador Eliminatoria E vs F</small>
+          </div>
+        </div>
+
+        <div style="background: #fff; border-radius: 8px; padding: 15px;">
+          <h4 style="color: #f57c00; margin-bottom: 10px;">📅 Calendario Triangular:</h4>
+          
+          <div class="triangular-match">
+            <strong>Jornada 22:</strong> Clasificado 1 vs Clasificado 2 | Clasificado 3 descansa
+          </div>
+          
+          <div class="triangular-match">
+            <strong>Jornada 23:</strong> Clasificado 1 vs Clasificado 3 | Clasificado 2 descansa
+          </div>
+          
+          <div class="triangular-match">
+            <strong>Jornada 24:</strong> Clasificado 2 vs Clasificado 3 | Clasificado 1 descansa
+          </div>
+
+          <div style="text-align: center; margin-top: 15px; padding: 10px; background: #fff3cd; border-radius: 6px;">
+            <strong>🏆 Ganador: El equipo con más puntos acumulados en las 3 jornadas</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="phase-section">
+      <h2>🏅 Premio Especial</h2>
+      <p>El ganador de la Copa del Rey recibirá un <strong>premio especial</strong> en la fiesta final, independientemente de su clasificación en la liga regular.</p>
+      <p>¡La Copa del Rey añade emoción extra a la competición familiar! 🎉</p>
+    </div>
+
+    <div class="phase-section">
+      <h2>⚖️ Criterios de Desempate</h2>
+      <p>En caso de empate en cualquier fase de la Copa del Rey, se aplicarán los siguientes criterios <strong>en orden</strong>:</p>
+      
+      <div class="highlight">
+        <strong>🥅 1º Criterio - Goles:</strong>
+        <p>Se añadirá <strong>un punto por cada gol conseguido</strong> por los jugadores del equipo fantasy</p>
+      </div>
+
+      <div class="highlight" style="background: #fff2e6; border-left-color: #ff9800;">
+        <strong>🟨🟥 2º Criterio - Tarjetas:</strong>
+        <ul>
+          <li>Se restará <strong>un punto por cada tarjeta amarilla</strong></li>
+          <li>Se restarán <strong>dos puntos por cada tarjeta roja</strong></li>
+          <li><strong>Importante:</strong> La doble amarilla NO acarrea roja (solo cuenta como 2 amarillas)</li>
+        </ul>
+      </div>
+
+      <div class="highlight" style="background: #f0f8ff; border-left-color: #2196f3;">
+        <strong>🥅 3º Criterio - Portero:</strong>
+        <p>Si persiste el empate, se decidirá por <strong>orden alfabético del portero alineado en el último partido disputado en la Copa</strong></p>
+      </div>
+
+      <p><em>Estos criterios garantizan que siempre haya un ganador claro en cada enfrentamiento.</em></p>
+    </div>
+
     <div class="back-button">
       <a href="index.html">← Volver a la clasificación</a>
     </div>
