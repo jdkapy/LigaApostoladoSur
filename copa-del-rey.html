@@ -7,24 +7,35 @@
   <style>
     body {
       font-family: 'Segoe UI', Arial, sans-serif;
-      background: #f4f6f8;
+      background: linear-gradient(180deg, 
+        #AA1E22 0%, 
+        #AA1E22 33%, 
+        #F1BF00 33%, 
+        #F1BF00 66%, 
+        #672D91 66%, 
+        #672D91 100%);
+      background-attachment: fixed;
       margin: 0;
       padding: 20px;
       line-height: 1.6;
+      min-height: 100vh;
     }
     .container {
       max-width: 900px;
       margin: auto;
-      background: #fff;
+      background: rgba(255, 255, 255, 0.95);
       border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 25px rgba(0,0,0,0.2);
       padding: 40px;
+      backdrop-filter: blur(10px);
     }
     h1 {
       text-align: center;
-      color: #27ae60;
+      color: #2c3e50;
       margin-bottom: 30px;
       font-size: 2.5em;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      font-weight: bold;
     }
     h2 {
       color: #2c3e50;
