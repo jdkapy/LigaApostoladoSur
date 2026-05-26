@@ -68,30 +68,48 @@
       background: #1a5980;
     }
     .awards-section {
-      border: 2px solid #f1c40f;
-      background: linear-gradient(160deg, #fffdf3 0%, #fff8e1 45%, #fff3cd 100%);
+      border: 2px solid #ffce47;
+      background: linear-gradient(150deg, #1b0f3f 0%, #37146f 50%, #6f1f83 100%);
+      color: #fff;
       position: relative;
       overflow: hidden;
+      box-shadow: 0 12px 24px rgba(39, 10, 75, 0.35);
     }
     .awards-section::before {
       content: "";
       position: absolute;
-      top: -35px;
-      right: -35px;
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(255,215,0,0.45) 0%, rgba(255,215,0,0) 72%);
+      inset: 0;
+      background:
+        radial-gradient(circle at 12% 22%, rgba(255, 211, 90, 0.55) 0 5px, transparent 6px),
+        radial-gradient(circle at 78% 18%, rgba(113, 229, 255, 0.45) 0 4px, transparent 5px),
+        radial-gradient(circle at 30% 78%, rgba(255, 142, 208, 0.45) 0 4px, transparent 5px),
+        radial-gradient(circle at 86% 72%, rgba(186, 255, 121, 0.45) 0 4px, transparent 5px);
       pointer-events: none;
+      animation: confettiPulse 4.5s ease-in-out infinite;
+    }
+    .awards-section::after {
+      content: "GRAN FINAL";
+      position: absolute;
+      top: 14px;
+      right: -38px;
+      transform: rotate(28deg);
+      background: #ffce47;
+      color: #522300;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 6px 40px;
+      font-size: 0.72em;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
     }
     .awards-title {
-      color: #7a5a00;
+      color: #ffe58a;
       margin-bottom: 12px;
+      text-shadow: 0 2px 10px rgba(255, 205, 70, 0.45);
     }
     .awards-intro {
-      color: #5c4a12;
+      color: #f8ecff;
       text-align: center;
-      margin-bottom: 16px;
+      margin-bottom: 18px;
       line-height: 1.5;
     }
     .awards-list {
@@ -101,34 +119,115 @@
       display: grid;
       gap: 12px;
     }
+    .awards-podium {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      gap: 10px;
+      margin: 8px 0 18px;
+      position: relative;
+      z-index: 1;
+    }
+    .podium-step {
+      width: 31%;
+      min-height: 72px;
+      border-radius: 10px 10px 6px 6px;
+      padding: 8px 6px;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 2px;
+    }
+    .podium-rank {
+      font-size: 1.15em;
+      font-weight: 700;
+      color: #fff7bf;
+    }
+    .podium-name {
+      font-size: 0.84em;
+      color: #fff;
+      opacity: 0.95;
+    }
+    .podium-second {
+      min-height: 64px;
+      background: linear-gradient(180deg, rgba(180, 235, 255, 0.3), rgba(101, 181, 255, 0.38));
+      border-color: #9ad7ff;
+    }
+    .podium-first {
+      min-height: 82px;
+      background: linear-gradient(180deg, rgba(255, 236, 160, 0.3), rgba(255, 196, 63, 0.42));
+      border-color: #ffd760;
+    }
+    .podium-third {
+      min-height: 56px;
+      background: linear-gradient(180deg, rgba(242, 205, 255, 0.28), rgba(200, 126, 255, 0.38));
+      border-color: #dcafff;
+    }
     .award-item {
       display: flex;
       align-items: center;
       gap: 10px;
       padding: 12px 14px;
       border-radius: 10px;
-      border: 1px solid transparent;
+      border: 1px solid rgba(255, 255, 255, 0.25);
       font-size: 0.98em;
+      backdrop-filter: blur(2px);
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .award-item::after {
+      content: "✨";
+      position: absolute;
+      top: 50%;
+      left: -22px;
+      transform: translateY(-50%);
+      opacity: 0;
+      transition: left 0.35s ease, opacity 0.35s ease;
+      font-size: 1em;
+      pointer-events: none;
+    }
+    .award-item:hover {
+      transform: translateY(-2px) scale(1.01);
+      box-shadow: 0 8px 16px rgba(15, 6, 32, 0.35);
+    }
+    .award-item:hover::after {
+      left: calc(100% - 24px);
+      opacity: 1;
     }
     .award-icon {
       font-size: 1.25em;
       line-height: 1;
     }
     .award-family {
-      background: #fff8d6;
-      border-color: #f4d03f;
+      background: linear-gradient(120deg, rgba(255, 228, 148, 0.25), rgba(255, 201, 74, 0.35));
+      border-color: #ffd65a;
     }
     .award-adult {
-      background: #e8f4ff;
-      border-color: #5dade2;
+      background: linear-gradient(120deg, rgba(150, 222, 255, 0.22), rgba(72, 174, 255, 0.34));
+      border-color: #79c7ff;
     }
     .award-kid {
-      background: #f2f0ff;
-      border-color: #a29bfe;
+      background: linear-gradient(120deg, rgba(227, 188, 255, 0.22), rgba(185, 108, 255, 0.34));
+      border-color: #d19dff;
     }
     .award-cup {
-      background: #e8fff1;
-      border-color: #58d68d;
+      background: linear-gradient(120deg, rgba(178, 255, 180, 0.22), rgba(66, 208, 129, 0.34));
+      border-color: #87efb5;
+    }
+    .award-item strong {
+      color: #fff7bf;
+    }
+    @keyframes confettiPulse {
+      0%, 100% {
+        opacity: 0.8;
+      }
+      50% {
+        opacity: 1;
+      }
     }
     @media (max-width: 600px) {
       body {
@@ -136,6 +235,18 @@
       }
       .table-container {
         padding: 18px;
+      }
+      .awards-section::after {
+        top: 10px;
+        right: -46px;
+        font-size: 0.66em;
+        padding: 6px 44px;
+      }
+      .awards-podium {
+        gap: 6px;
+      }
+      .podium-name {
+        font-size: 0.78em;
       }
       .award-item {
         font-size: 0.95em;
@@ -169,6 +280,20 @@
   <div class="table-container awards-section">
     <h2 class="awards-title">🎯 Premios y Fiesta Final</h2>
     <p class="awards-intro"><strong>La entrega de premios será organizada por los organizadores</strong> en una gran fiesta final:</p>
+    <div class="awards-podium">
+      <div class="podium-step podium-second">
+        <span class="podium-rank">2º</span>
+        <span class="podium-name">Paulo</span>
+      </div>
+      <div class="podium-step podium-first">
+        <span class="podium-rank">1º</span>
+        <span class="podium-name">Familia Fraile</span>
+      </div>
+      <div class="podium-step podium-third">
+        <span class="podium-rank">3º</span>
+        <span class="podium-name">Nicolas</span>
+      </div>
+    </div>
     <ul class="awards-list">
       <li class="award-item award-family"><span class="award-icon">🏆</span><strong>Mejor Familia:</strong> Familia Fraile </li>
       <li class="award-item award-adult"><span class="award-icon">👨</span><strong>Mejor Adulto:</strong> Paulo </li>
