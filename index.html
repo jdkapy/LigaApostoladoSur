@@ -67,12 +67,86 @@
     .history-button a:hover {
       background: #1a5980;
     }
+    .awards-section {
+      border: 2px solid #f1c40f;
+      background: linear-gradient(160deg, #fffdf3 0%, #fff8e1 45%, #fff3cd 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .awards-section::before {
+      content: "";
+      position: absolute;
+      top: -35px;
+      right: -35px;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,215,0,0.45) 0%, rgba(255,215,0,0) 72%);
+      pointer-events: none;
+    }
+    .awards-title {
+      color: #7a5a00;
+      margin-bottom: 12px;
+    }
+    .awards-intro {
+      color: #5c4a12;
+      text-align: center;
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+    .awards-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 12px;
+    }
+    .award-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 14px;
+      border-radius: 10px;
+      border: 1px solid transparent;
+      font-size: 0.98em;
+    }
+    .award-icon {
+      font-size: 1.25em;
+      line-height: 1;
+    }
+    .award-family {
+      background: #fff8d6;
+      border-color: #f4d03f;
+    }
+    .award-adult {
+      background: #e8f4ff;
+      border-color: #5dade2;
+    }
+    .award-kid {
+      background: #f2f0ff;
+      border-color: #a29bfe;
+    }
+    .award-cup {
+      background: #e8fff1;
+      border-color: #58d68d;
+    }
+    @media (max-width: 600px) {
+      body {
+        margin: 18px;
+      }
+      .table-container {
+        padding: 18px;
+      }
+      .award-item {
+        font-size: 0.95em;
+      }
+    }
   </style>
 </head>
 <body>
     <h1>Liga Fantasy Apostolado Sur ⚽</h1>
   <div class="table-container">
-    <h2>Clasificación en la jornada 37</h2>
+    <h2>Clasificación en la jornada 38</h2>
     <table>
       <thead>
         <tr>
@@ -82,14 +156,25 @@
         </tr>
       </thead>
       <tbody>
-        <tr><td>Fraile</td><td>3654</td><td>👑</td></tr>
-        <tr><td>Dos Santos</td><td>3520</td><td>-134</td></tr>
-        <tr><td>Andrés</td><td>3356</td><td>-298</td></tr>
-        <tr><td>Arranz</td><td>3303</td><td>-351</td></tr>
-        <tr><td>Fernandez</td><td>3167</td><td>-487</td></tr>
-        <tr><td>Mártin</td><td>483</td><td>-3171</td></tr>
+        <tr><td>Fraile</td><td>3741</td><td>👑</td></tr>
+        <tr><td>Dos Santos</td><td>3581</td><td>-160</td></tr>
+        <tr><td>Andrés</td><td>3443</td><td>-298</td></tr>
+        <tr><td>Arranz</td><td>3389</td><td>-352</td></tr>
+        <tr><td>Fernandez</td><td>3281</td><td>-460</td></tr>
+        <tr><td>Mártin</td><td>483</td><td>-3258</td></tr>
       </tbody>
     </table>
+  </div>
+
+  <div class="table-container awards-section">
+    <h2 class="awards-title">🎯 Premios y Fiesta Final</h2>
+    <p class="awards-intro"><strong>La entrega de premios será organizada por los organizadores</strong> en una gran fiesta final:</p>
+    <ul class="awards-list">
+      <li class="award-item award-family"><span class="award-icon">🏆</span><strong>Mejor Familia:</strong> Familia Fraile</li>
+      <li class="award-item award-adult"><span class="award-icon">👨</span><strong>Mejor Adulto:</strong> Paulo dos Santos</li>
+      <li class="award-item award-kid"><span class="award-icon">👶</span><strong>Mejor Niño:</strong> Nicolas Fraile</li>
+      <li class="award-item award-cup"><span class="award-icon">🥇</span><strong>Campeón de Copa:</strong> Rodrigo</li>
+    </ul>
   </div>
 
   <div class="history-button">
